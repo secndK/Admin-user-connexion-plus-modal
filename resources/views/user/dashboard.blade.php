@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'admin')
+<!-- modifier le titre -->
+@section('title', 'Accueil')
 
+<!-- renseigner le body -->
 @section('content')
-
 
 
 <!-- bouton de deconnection désactivé -->
@@ -12,8 +13,7 @@
     <button type="submit">Déconnexion</button>
 </form> -->
 
-
-<!-- modal de bienvenue -->
+<!-- modal de bienvenue fait avec boostrap -->
 
 <div class="modal fade" id="welcomeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -31,26 +31,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
