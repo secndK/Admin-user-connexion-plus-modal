@@ -78,6 +78,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--script du modal -->
 <script>
     // Au chargement de la page, le modal est affiché

@@ -4,7 +4,17 @@
 
 @section('content')
 
+
+
+<!-- bouton de deconnection désactivé -->
+<!--<form method="POST" action="{{ route('logout') }}">
+    @csrf
+    <button type="submit">Déconnexion</button>
+</form> -->
+
+
 <!-- modal de bienvenue -->
+
 <div class="modal fade" id="welcomeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -22,11 +32,6 @@
     </div>
 </div>
 
-<!-- bouton de deconnection -->
-<form method="POST" action="{{ route('logout') }}">
-    @csrf
-    <button type="submit">Déconnexion</button>
-</form>
 
 
 
@@ -81,6 +86,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+<!--script du modal -->
+<script>
+    // Au chargement de la page, le modal est affiché
+    document.addEventListener('DOMContentLoaded', function () {
+        var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'), {
+            keyboard: false
+        });
+        myModal.show();
+    });
+</script>
 
 
 

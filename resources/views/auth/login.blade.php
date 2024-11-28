@@ -11,11 +11,15 @@
             <strong>Erreur :</strong> {{ $errors->first() }}
         </div>
     @endif
+
     <div class="d-flex justify-content-center align-items-center min-vh-100">
         <div class="card" style="width: 20rem;">
-            <div class="card-header text-center">
+            <div class="card-header text-center ">
                 <h4>Connexion</h4>
             </div>
+
+
+
             <div class="card-body">
                 <form method="POST" action="/login">
                     @csrf
@@ -28,10 +32,12 @@
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
                     <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-primary">Se connecter</button>
+                        <button type="submit" class="btn btn-outline-warning">Se connecter</button>
                     </div>
                 </form>
             </div>
+
+
         </div>
     </div>
 
