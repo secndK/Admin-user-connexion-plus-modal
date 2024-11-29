@@ -20,14 +20,14 @@ class AuthController extends Controller
     //fonction implémentant la logique derrière la connection en comparant les mot de passe et les emails
 
     public function login(Request $request){
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('name', 'password');
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
             return redirect('/redirect');
         }
 
-        return back()->withErrors(['email' => 'Les emails sont guez'],);
+        return back()->withErrors(['name' => 'Vos identifiants ou vôtre mot de passe sont incorrectss'],);
     }
 
 

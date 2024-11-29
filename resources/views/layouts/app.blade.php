@@ -13,19 +13,25 @@
     <!-- Lien icône Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
 
     <!-- titre à personaliser -->
     <title>@yield('title')</title>
 
-    <!--lien pour utilisé la police ubuntu de google -->
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
-   <!-- Lien CSS global -->
-   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 
    <!--lien tailwind css -->
 
    @vite('resources/css/app.css')
+
+
+   <!-- lien css classique -->
+   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+
+
 
 
 </head>
