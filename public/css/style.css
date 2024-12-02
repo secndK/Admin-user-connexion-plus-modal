@@ -6,37 +6,36 @@ body {
     font-style: normal;
 
 }
-
-
-.hover-bg-white:hover {
-    background-color: #fff !important;
-}
-
-.hover-text-warning:hover {
-    color: #ffc107 !important;
-}
 .sidebar {
-    background-color: #ffc107; /* Adjust the background color */
-    color: #333; /* Adjust the text color */
-  }
+    transition: width 0.3s ease;
+    width: 250px; /* Taille initiale */
+    overflow: hidden;
+}
 
-  .sidebar a {
-    color: #333;
-    text-decoration: none;
-  }
+.sidebar.collapsed {
+    width: 80px; /* Taille réduite */
+}
 
-  .sidebar a:hover {
-    background-color: #fff;
-    color: #ffc107;
-  }
+.sidebar .menu-links .span-style {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-  .sidebar .menu-links li.active a {
-    font-weight: bold;
-    background-color: #fff;
-    color: #ffc107;
-  }
+.sidebar.collapsed .menu-links .span-style {
+    opacity: 0;
+    transform: translateX(-10px);
+    pointer-events: none;
+}
 
+.sidebar.collapsed .menu-links .bx {
+    text-align: center;
+    width: 100%;
+}
 
+.sidebar .toggle {
+    transition: transform 0.3s ease;
+}
 
-
+.sidebar.collapsed .toggle {
+    transform: rotate(180deg);
+}
 
