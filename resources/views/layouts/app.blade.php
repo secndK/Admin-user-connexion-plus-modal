@@ -36,7 +36,7 @@
 
 
     .sidebar{
-        background: whitesmoke;
+        background: rgb(19, 30, 93);
         box-shadow: 2px 0 24px;
         padding-block: 1.5rem;
 
@@ -75,7 +75,7 @@
 
         transition: color .4s;
         font-size: 15px;
-        color: blue;
+        color: rgb(249, 249, 255);
     }
 
     .sidebar-content{
@@ -98,7 +98,7 @@
         font-size: 19px;
         font-weight: bold;
         padding-left: 1.5rem;
-        color: #2b1955
+        color: #ffffff
 
 
     }
@@ -115,7 +115,7 @@
         grid-template-columns:repeat(2, max-content);
         align-items: center;
         column-gap: 1rem;
-        color: #eac774;
+        color: #ffffff;
         padding-left: 2rem;
         transition: color .4s, opacity .4s;
 
@@ -124,13 +124,13 @@
         font-size: 1.25rem;
     }
 
-
     .sidebar-link span{
         font-weight: 15px;
     }
 
     .sidebar-link:hover {
-        background: rgb(63, 52, 52)  ;
+        background: rgb(255, 254, 252)  ;
+        color: #eac774;
     }
 
     .sidebar-actions{
