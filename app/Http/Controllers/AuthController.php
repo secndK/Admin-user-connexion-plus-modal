@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
@@ -27,7 +28,7 @@ class AuthController extends Controller
             return redirect('/redirect');
         }
 
-        return back()->withErrors(['name' => 'Vos identifiants ou vôtre mot de passe sont incorrectss'],);
+        return back()->withErrors(['name' => 'Vos identifiants ou vôtre mot de passe sont incorrects'],);
     }
 
 
@@ -53,16 +54,20 @@ class AuthController extends Controller
 
         if (Auth::check()) { // Vérifie si l'utilisateur est authentifié
             $user = Auth::user(); // Récupère l'utilisateur authentifié
+            $username = Auth::user()->name;
+            // dd($username);
 
             if ($user->role == 'admin') {
-                return redirect()->route('admin.dashboard');
+                return redirect()->route('admin.dashboard')->with('success', 'Connexion reussie, Bienvenue '. ' ' . $username);
             } elseif ($user->role == 'user') {
-                return redirect()->route('user.dashboard');
+                return redirect()->route('user.dashboard')->with('success', 'Connexion reussie, Bienvenue'. $username);
+            }else{
+                // Redirige vers la page de connexion si l'utilisateur n'est pas authentifié
+                return redirect()->route('login')->with('error', 'votre tentative de connexion a échouer');
             }
         }
 
-        // Redirige vers la page de connexion si l'utilisateur n'est pas authentifié
-        return redirect()->route('login');
+
 
     }
 
